@@ -25,9 +25,6 @@
 /*-----Body-----*/
 body {
     background-color: var(--background);
-    /* height: 1666px; */
-    /* width: 1280px; */
-    /* margin: 20px 80px 0 80px; */
 }
 
 /*-----Main Grid Container-----*/
@@ -43,7 +40,6 @@ body {
 display: flex;
 justify-content: space-between;
 align-items: center;
-border: 1px solid;
 }
 
 /*-----Main Item-----*/
@@ -52,7 +48,8 @@ border: 1px solid;
     justify-content: space-between;
     align-items: center;
     margin-top: 10%;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
+    column-gap: 20px;
 }
 
 /*-----Cards Item-----*/
@@ -86,9 +83,9 @@ a {
 .header-nav {
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
-    width: 15%;
-    border: 1px solid;
+    justify-content: flex-start;
+    column-gap: 50px;
+    width: 33%;
 }
 
 /*-----Header Button-----*/
@@ -103,13 +100,26 @@ a {
     font-weight: var(--button-weight);
 }
 
+/*-----Header Image-----*/
+.header-img {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
+
+/*-----Header Button-----*/
+.header-btn{
+    width: 33%;
+    display: flex;
+    justify-content: flex-end;
+}
+
 
 /*-----Title Text-----*/
 .title-text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
 
 /*-----Title Heading-----*/
@@ -126,15 +136,8 @@ h1 {
     font-weight: var(--p-weight);
     color: var(--text-secondary);
     line-height: 32px;
-
 }
 
-/*-----Title Image-----*/
-.grid-item-main img {
-    height: 90%;
-    width: 100%;
-    
-}
 
 /*-----Yellow Card-----*/
 .yellow-card {
@@ -157,6 +160,9 @@ h1 {
     border-radius: 50px;
     padding: 20px 40px 45px 40px;
     position: relative;
+    box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 32px;    
+
 }
 
 /*-----White Card Buttons-----*/
@@ -190,12 +196,58 @@ h1 {
 /*-----White Card Icon-----*/
 .white-cards img{
  position: absolute;
-left: 10px;
+ right: 25px;
+ top: -45px;
 }
 
 @media screen and (max-width: 1000px) {
     /*-----Cards Item-----*/
 .grid-item-cards {
     grid-template-columns: repeat(2, 1fr);
+}
+
+/*-----Main Item-----*/
+.grid-item-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    row-gap: 50px;
+}
+
+/*-----Title Text-----*/
+.title-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+}
+
+@media screen and (max-width: 400px) {
+        /*-----Cards Item-----*/
+.grid-item-cards {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/*-----Main Item-----*/
+.grid-item-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    row-gap: 50px;
+}
+
+/*-----Title Text-----*/
+.title-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
 }
 }
