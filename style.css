@@ -1,3 +1,4 @@
+/* Nice work on using CSS variables! */
 /*-----Variables-----*/
 :root {
     --background: #F5F3EF;
@@ -22,12 +23,21 @@
     --button-weight: 500;
 }
 
+/* The image is not responsive. You should use percentages to make images responsive. */
+
 /*-----Body-----*/
 body {
     background-color: var(--background);
 }
 
 /*-----Main Grid Container-----*/
+/* Good job on using Grid and flex box.
+However, there’s room for improvement.
+You added a margin on the top and bottom for most grid items.
+You can take advantage of declaring the grid-template-rows for better code quality and for easier managing. */
+
+/* Grid template areas are not used in the project.
+This is a requirement in the rubric. */
 .grid-container {
     display: grid;
     grid-template-rows: repeat(4, auto);
@@ -89,6 +99,7 @@ a {
 }
 
 /*-----Header Button-----*/
+/* Nice work on using the correct font for the correct element! */
 .grid-item-header button {
     background-color: var(--text-primary);
     color: var(--card);
@@ -200,6 +211,12 @@ h1 {
  top: -45px;
 }
 
+/* Good job on making it responsive on tablet devices.
+It is not responsive for mobile devices.
+There is more room for improvement within your media queries.
+There is a lot of duplicated code.
+You should only mention the parts that you want to change in the certain breakpoint. 
+You don’t have to have display flex in the media query because you are not changing it. */
 @media screen and (max-width: 1000px) {
     /*-----Cards Item-----*/
 .grid-item-cards {
@@ -226,6 +243,7 @@ h1 {
 }
 }
 
+/* You haven’t created a functional hamburger menu on mobile devices. */
 @media screen and (max-width: 400px) {
         /*-----Cards Item-----*/
 .grid-item-cards {
